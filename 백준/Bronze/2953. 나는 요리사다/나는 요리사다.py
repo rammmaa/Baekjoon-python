@@ -1,13 +1,6 @@
-import sys
-input = sys.stdin.readline
+arr = []
 
-best_i = 0
-best_s = -1
+for _ in range(5):
+    arr.append(sum(list(map(int, input().split()))))
 
-for i in range(5):
-    s = sum(map(int, input().split()))
-    if s > best_s:
-        best_s = s
-        best_i = i + 1
-
-print(best_i, best_s)
+print(arr.index(max(arr)) + 1, max(arr))
